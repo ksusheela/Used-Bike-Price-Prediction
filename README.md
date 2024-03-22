@@ -14,11 +14,11 @@ git push origin main
 ## How to run?
 
 ```bash
-conda create -n safety python=3.8 -y
+conda create -p bike python=3.8 -y
 ```
 
 ```bash
-conda activate safety
+conda activate bike
 ```
 
 ```bash
