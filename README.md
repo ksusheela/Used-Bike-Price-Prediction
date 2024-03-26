@@ -14,7 +14,7 @@ git push origin main
 ## How to run?
 
 ```bash
-conda create -p bike python=3.8 -y
+conda create -p bike python=3.9 -y
 ```
 
 ```bash
