@@ -12,6 +12,10 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from src.utils import save_object
 
+# Pipline
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+
 
 @dataclass
 class DataTRansformationConfig:

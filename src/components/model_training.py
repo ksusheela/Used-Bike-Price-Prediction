@@ -15,6 +15,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score
 
 from src.utils import save_object
+from src.utils import model_evalution
 
 
 
@@ -25,7 +26,7 @@ class ModelTraningconfig:
 
 class ModelTraning:
     def __init__(self):
-        self.model_traner_config = ModelTraningconfig()
+        self.model_trainer_config = ModelTraningconfig()
 
 
     def initaied_model_traning(self,train_array,test_array):
