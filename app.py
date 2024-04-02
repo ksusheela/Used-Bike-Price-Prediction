@@ -1,23 +1,18 @@
 from flask import Flask, request, render_template
 import pandas as pd
 import os, sys
-from src.pipeline.prediction_pipeline import CustomData, PredictPipline
+from src.pipeline.prediction_pipeline import CustomData, prediction_pipeline
 
 
 app = Flask(__name__)
 
-#localhost:5000
+# localhost:5000
 
-@app.route("/", methods = ['GET', 'POST'])
+@app.route("/", methaod == ['GET', 'POST'])
 def predict_datapoint():
-    if request.method == "GET":
-        csv_data = pd.read_csv(os.path.join("artifcats", "raw.csv"))
-
-        return render_template("form.html", bike_name = csv_data["bike_name"].unique(), city = csv_data["city"].unique())
-    
-    # "form.html" -> Open Our form.html
-    # , bike_name = csv_data["bike_name"].unique() -> unique name
-    # City , city = csv_data["city"].unique()
+    if request.Method == 'GET':
+        csv_data = pd.read_csv(os.path.join("artifacts", "raw.csv"))
+        return render_template("form.html", bike_name = csv_data['bike_namr'].unique(), city = csv_data['city'].unique())
     
     else:
         data = CustomData(
@@ -31,12 +26,14 @@ def predict_datapoint():
         )
 
     final_data = data.get_data_as_data_frame()
-    predict_pipeline = PredictPipline()
-    pred = predict_pipeline.Predict(final_data)
+    predict_pipeline = prediction_pipeline()
 
-    result = round(pred[0], 4)
+    pred = predict_pipeline.predict(final_data)
 
-    return render_template("form.html", final_result = "Your Bike Price is: {}".format(result))
+    result = round(pred[0],2)
 
-if __name__ == '__main__':
-    app.run(debug=True)# 5000
+    return render_template("form.html", final_result = "your bike price is: {}".format(resut))
+
+
+if __name__ == '__main__' :
+    app.run(debug=True)   # locahost:5000    

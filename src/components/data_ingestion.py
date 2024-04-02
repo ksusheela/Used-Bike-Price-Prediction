@@ -72,6 +72,6 @@ if __name__=="__main__":
 
     #Model training 
     model_training = ModelTraining()
-    model_training.initiate_model_training(train_arr, test_arr)
+    model_training.initaied_model_training(train_arr, test_arr)
 
     

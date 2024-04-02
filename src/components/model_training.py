@@ -20,16 +20,16 @@ from src.utils import model_evalution
 
 
 @dataclass
-class ModelTraningconfig:
-    train_model_file_path = os.path.join("artifcats","model.pkl")
+class ModelTrainingconfig:
+    train_model_file_path = os.path.join("artifacts","model.pkl")
 
 
-class ModelTraning:
+class ModelTraining:
     def __init__(self):
-        self.model_trainer_config = ModelTraningconfig()
+        self.model_trainer_config = ModelTrainingconfig()
 
 
-    def initaied_model_traning(self,train_array,test_array):
+    def initaied_model_training(self,train_array,test_array):
         try:
             logging.info("Spliting Dependent And Indipendent Feature")
             X_train,y_train,X_test,y_test = (
@@ -70,7 +70,7 @@ class ModelTraning:
             logging.info(f"Best Model Found, Model Name: {best_model_name}, R2 Score : {best_model_score}")
 
 
-            save_object(file_path=self.model_traner_config.train_model_file_path,
+            save_object(file_path=self.model_trainer_config.train_model_file_path,
             obj=best_model
             )
            
