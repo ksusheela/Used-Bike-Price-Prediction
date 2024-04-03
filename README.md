@@ -28,3 +28,9 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+
+# Results
+
+## Best Model  Name: XGBRegressor
+
+## R2 Score : 0.892977380734483
