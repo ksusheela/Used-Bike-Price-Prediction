@@ -8,15 +8,15 @@ from src.exception import CustomException
 from src.utils import load_object
 
 
-class PredictPipline:
+class PredictionPipeline:
     def __init__(self):
         pass
 
     def Predict(self,features):
         try:
             ## This line Of code Work in Any system
-            preproccesor_path = os.path.join("artifcats","preprocessor.pkl")
-            model_path = os.path.join("artifcats","model.pkl")
+            preproccesor_path = os.path.join("artifacts","preprocessor.pkl")
+            model_path = os.path.join("artifacts","model.pkl")
 
             preprocessor = load_object(preproccesor_path)
             model = load_object(model_path)
